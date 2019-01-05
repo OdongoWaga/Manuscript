@@ -15,6 +15,8 @@ const { auth} = require('./middleware/auth')
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+
+app.use(express.static('client/build'))
 // GET //
 app.get('/api/auth',auth,(req,res)=>{
     res.json({
